@@ -1,6 +1,9 @@
 # Gnome-Terminal-Color-Matching
 Makes the gnome-terminal package set its background and foreground colors accordingly to your wallpaper. May need some configuration to use your user profile.
 
+# Dependencies
+python2 PIL
+
 # Installation Instructions
 1:Edit the python file and change the Profile Variable to yours found in file>profile prefrences.
 
