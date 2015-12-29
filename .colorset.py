@@ -11,15 +11,15 @@ def compute_average_image_color(img):
    width, height = img.size
    pixels = img.getcolors(width * height)
    avg_pix = pixels[0]
-   (count, (r, g, b)) = avg_pix
+   [r, g, b] = avg_pix[1][:3]
    if (r + g + b) / 3 >= 235:
       avg_pix = pixels[1]
    ## print(avg_pix) # for debugging purposes
    for i, color in pixels:
-      (r_t, g_t, b_t) = color
+      (r_t, g_t, b_t) = color[:3]
       avg_t = (r_t + g_t + b_t) / 3
       if ((i > avg_pix[0]) and ((avg_t > 30) and (avg_t < 235))):
-         avg_pix = (i, color)
+         avg_pix = (i, color[:3])
          ## print(color) # for debugging purposes
    (count, (r, g, b)) = avg_pix
    if ((r + g + b) / 3 > 200):
