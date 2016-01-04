@@ -13,7 +13,7 @@ def computeAvgCol(img):
    width, height = img.size
    pixels = img.getcolors(width * height)
    avgPix = pixels[0]
-   pixCount= len(pixels)
+   pixCount = len(pixels)
 
    for i in range(0, pixCount):
       avgPix = pixels[i]
